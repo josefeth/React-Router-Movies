@@ -5,10 +5,10 @@ import MovieCard from "./MovieCard";
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
-  const {id} = useParams();
+  const id = props.match.params.id;
   useEffect(() => {
-    const id = 1;
-    
+    // const id = 1;
+    // const id = props.match.params.id;
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
@@ -37,7 +37,7 @@ const Movie = (props) => {
   return (
     
     <div className="save-wrapper">
-    <MovieCard movie={movie} />
+    {/* <MovieCard key={id} movie={movie} /> */}
     <div className="save-button" onClick={saveMovie}>
       Save
 </div>
